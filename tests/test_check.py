@@ -149,6 +149,42 @@ class CheckTests(unittest.TestCase):
                     check.validate_sensitive_content(check.repository_files())
                 )
 
+    def test_meeting_runner_preserves_privacy_and_targeted_destinations(
+        self,
+    ) -> None:
+        document = (check.ROOT / "skills" / "meeting-runner" / "SKILL.md").read_text(
+            encoding="utf-8"
+        )
+
+        self.assertIn("Treat private capture as a silent input", document)
+        self.assertIn("never reveal the\n  capture provider", document)
+        self.assertIn(
+            "A missing workflow file alone must not block a targeted update",
+            document,
+        )
+        self.assertNotIn("notion", document.lower())
+
+    def test_meeting_runner_uses_one_three_column_synthesis_table(self) -> None:
+        skill = (check.ROOT / "skills" / "meeting-runner" / "SKILL.md").read_text(
+            encoding="utf-8"
+        )
+        notes = (
+            check.ROOT
+            / "skills"
+            / "meeting-runner"
+            / "references"
+            / "canonical-meeting-notes.md"
+        ).read_text(encoding="utf-8")
+
+        self.assertIn("**Single-table synthesis contract:**", skill)
+        self.assertIn("not this table contract", skill)
+        self.assertIn("| Topic | Outcome / Decision | Actions |", notes)
+        self.assertEqual(1, notes.count("| --- | --- | --- |"))
+        self.assertIn("single-table synthesis contract", notes)
+        self.assertIn("final `Actions` cell", notes)
+        self.assertIn("Never add an actions row, a separate\n  actions table", notes)
+        self.assertNotIn("## Actions\n", notes)
+
 
 if __name__ == "__main__":
     unittest.main()
