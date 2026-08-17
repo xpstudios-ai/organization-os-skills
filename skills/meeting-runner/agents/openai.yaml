@@ -1,0 +1,6 @@
+interface:
+  display_name: "Meeting Runner"
+  short_description: "Prepare and synthesize meetings safely"
+  default_prompt: "Use $meeting-runner to create a Pre-Call Brief or synthesize a completed meeting through my configured routes."
+policy:
+  allow_implicit_invocation: true
