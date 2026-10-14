@@ -1,0 +1,6 @@
+interface:
+  display_name: "Repo Document"
+  short_description: "Update repo docs"
+  default_prompt: "Use $repo-document to update documentation for these changes."
+policy:
+  allow_implicit_invocation: true

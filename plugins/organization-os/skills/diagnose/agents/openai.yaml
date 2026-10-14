@@ -1,0 +1,6 @@
+interface:
+  display_name: "Diagnose"
+  short_description: "Root-cause bugs"
+  default_prompt: "Use $diagnose to reproduce, minimise, and fix this bug."
+policy:
+  allow_implicit_invocation: true

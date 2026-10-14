@@ -1,7 +1,7 @@
 {
   "name": "organization-os",
-  "version": "1.0.0",
-  "description": "Turn meeting notes into reviewed decisions and owned next actions with Meeting Runner.",
+  "version": "1.1.0",
+  "description": "Prepare meetings, assess opportunities and move approved work through planning, review and follow-through with your own agent.",
   "author": {
     "name": "xpstudios",
     "url": "https://github.com/xpstudios-ai"
@@ -12,7 +12,7 @@
   "keywords": [
     "meetings",
     "decisions",
-    "actions",
-    "organization"
+    "planning",
+    "operations"
   ]
 }

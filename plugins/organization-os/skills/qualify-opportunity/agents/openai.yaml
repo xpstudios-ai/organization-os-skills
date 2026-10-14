@@ -1,0 +1,6 @@
+interface:
+  display_name: "Qualify Opportunity"
+  short_description: "Assess evidence, gaps and the next business decision"
+  default_prompt: "Use $qualify-opportunity to assess this opportunity and the evidence needed for the next decision."
+policy:
+  allow_implicit_invocation: true

@@ -9,7 +9,7 @@
     {
       "name": "organization-os",
       "source": "./plugins/organization-os",
-      "description": "Turn meeting notes into reviewed decisions and owned next actions with Meeting Runner.",
+      "description": "Prepare meetings, assess opportunities and move approved work through planning, review and follow-through with your own agent.",
       "category": "productivity"
     }
   ]
