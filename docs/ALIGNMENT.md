@@ -56,12 +56,17 @@ No folder selection or repository scaffolding is required. Existing project
 routes take precedence. Drafts remain in chat; credentials stay app-managed;
 user settings and records stay outside replaceable plugin resources.
 
-Codex fresh-process recall from a different empty directory passed with a local
-fictional map. Claude Code's documented personal-instruction route is available,
-but authenticated inference remains unverified because the test client is not
-signed in. Saving, fresh-model recall, live account/copy access and plugin-update
-preservation are distinct checks. Failed recall uses a per-chat home link and
-unsaved drafts, never a guessed route. Setup is client/profile-local.
+Native macOS Codex acceptance now covers agent-run public marketplace installation,
+personal startup setup preserving existing instructions, fresh-process recall
+outside Git, live account/copy/map discovery, draft-only meeting synthesis and
+approved native-template save/readback. It uses fictional publisher records and
+an existing authenticated Notion connector; fresh OAuth and a human recipient
+walkthrough remain separate. Host write approvals still apply. Claude Code's
+documented personal-instruction route is available, but authenticated inference
+remains unverified because the test client is signed out. Native Windows and web
+acceptance remain open. Saving, fresh recall, live access and update preservation
+are distinct checks. Failed recall uses a per-chat home link and unsaved drafts,
+never a guessed route. Setup is client/profile-local.
 
 ## Qualification Contract
 
@@ -102,8 +107,8 @@ source evidence. Contained native plugin discovery or lifecycle checks are not
 fresh inference or proof of connector writes. Record actual tests and skips in
 the release receipt, including exact source digests and actual hosted-check
 status. A fresh direct originating-chat review and repo-document assessment
-precede publication. Windows native acceptance, live account/copy discovery,
-authenticated Claude Code inference and customer writes remain distinct checks;
+precede publication. Windows native acceptance, recipient-owned live discovery,
+authenticated Claude Code inference and real customer writes remain distinct checks;
 a Git marketplace release does not claim public app-directory acceptance.
 
 ## Complete-Folder Provenance
