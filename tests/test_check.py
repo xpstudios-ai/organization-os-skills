@@ -200,6 +200,36 @@ class CheckTests(unittest.TestCase):
 
         self.assertTrue(check.validate_sensitive_content(check.repository_files()))
 
+    def test_published_template_link_is_allowed_only_in_readme(self) -> None:
+        link = f"[Organization OS Notion template]({check.PUBLIC_TEMPLATE_URL})\n"
+        readme = self.root / "README.md"
+        readme.write_text(link)
+        self.assertEqual([], check.validate_sensitive_content([readme]))
+        guide = self.root / "CONTRACT.md"
+        guide.write_text(link)
+        self.assertTrue(check.validate_sensitive_content([guide]))
+
+    def test_public_link_exception_does_not_allow_other_identifiers(self) -> None:
+        readme = self.root / "README.md"
+        page_id = check.PUBLIC_TEMPLATE_URL.rsplit("-", 1)[1]
+        cases = [
+            f"[Other]({check.PUBLIC_TEMPLATE_URL.replace(page_id, 'a' * 32)})",
+            "[Editor](https://app." + "notion.com/p/" + page_id + ")",
+            page_id,
+            f"[Template]({check.PUBLIC_TEMPLATE_URL})\n" + "a" * 32,
+            f"[Template]({check.PUBLIC_TEMPLATE_URL}?other=" + "a" * 32 + ")",
+        ]
+        for content in cases:
+            with self.subTest(content=content):
+                readme.write_text(content)
+                self.assertTrue(check.validate_sensitive_content([readme]))
+
+    def test_public_link_does_not_bypass_configured_prohibited_terms(self) -> None:
+        readme = self.root / "README.md"
+        readme.write_text(f"[Template]({check.PUBLIC_TEMPLATE_URL})")
+        with patch.dict("os.environ", {"ORGOS_SKILLS_PROHIBITED_TERMS": "kindly-sheep"}):
+            self.assertTrue(check.validate_sensitive_content([readme]))
+
     def test_rejects_common_secret_families(self) -> None:
         secrets = [
             "github_" + "pat_" + "A" * 30,
