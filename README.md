@@ -13,9 +13,13 @@ using the unchanged upstream reference folders. Explicit Setup Agent Workflows
 merges a startup pointer into existing instructions; installation alone does
 not rewrite them.
 
-## Use Organization OS in Codex or Claude Code
+## Choose your agent
 
-Start with **Codex or Claude Code**. Connect your Notion copy and ask the agent
+**Codex** and **Claude Code** are suggested starting points. Other Agent Skills
+clients may also load the complete skill folders; check their installation,
+Notion access and setup recall. Plugin marketplaces are client-specific.
+
+Connect your Notion copy and ask the agent
 to remember it in your personal settings. Business setup requires no folder
 selection, Git knowledge or configuration-file editing. For software work, keep
 the existing project and its instructions.
@@ -27,12 +31,7 @@ Version 1.0.0 remains available as the earlier Meeting Runner-only starter.
 
 **In Codex, ask the agent to install it for you:**
 
-> Install Organization OS from the public xpstudios marketplace in
-> xpstudios-ai/organization-os-skills, using its plugin-release branch. Do the
-> installation for me, preserve existing skills and settings, and verify version
-> 1.1.0, Meeting Runner and Workflow Guide with their supporting files. Tell me
-> when to start a new chat. If this client cannot install it, explain what is
-> missing; do not ask me to run terminal commands.
+> Install Organization OS from [https://github.com/xpstudios-ai/organization-os-skills](https://github.com/xpstudios-ai/organization-os-skills), using its plugin-release marketplace. Handle the installation for me, preserve my existing skills and settings, and confirm Meeting Runner and Workflow Guide are ready.
 
 On the tested macOS Codex client, the agent registers the marketplace and installs
 the plugin using the installed host tools. You do not open a terminal or choose a
