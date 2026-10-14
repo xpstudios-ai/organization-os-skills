@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "skills": [
+    "meeting-runner",
+    "workflow-guide",
+    "qualify-opportunity",
+    "to-questionnaire",
+    "workflow-retro",
+    "handoff",
+    "to-spec",
+    "to-tickets",
+    "triage",
+    "repo-review",
+    "repo-document",
+    "diagnose",
+    "codebase-design",
+    "writing-for-agents",
+    "setup-agent-workflows"
+  ],
+  "marketplace": "xpstudios",
+  "stableBranch": "plugin-release",
+  "tagPrefix": "organization-os-plugin-v",
+  "channels": {
+    "openaiDirectory": {
+      "status": "pending",
+      "installUrl": null
+    },
+    "claudeDirectory": {
+      "status": "pending",
+      "installUrl": null
+    }
+  }
+}

@@ -1,8 +1,10 @@
 from __future__ import annotations
 
 import shutil
+import json
 import tempfile
 import unittest
+from types import SimpleNamespace
 from pathlib import Path
 from unittest.mock import patch
 
@@ -37,12 +39,62 @@ class CheckTests(unittest.TestCase):
         files = check.repository_files()
         errors = [
             *check.validate_shape(),
+            *check.validate_catalog(),
             *check.validate_frontmatter(),
             *check.validate_agent_metadata(),
             *check.validate_links(files),
             *check.validate_sensitive_content(files),
         ]
         self.assertEqual([], errors)
+
+    def test_malformed_catalog_and_dependency_cycle_are_rejected(self) -> None:
+        path = self.root / "catalog.json"
+        original = path.read_text()
+        path.write_text("{not json}")
+        self.assertTrue(check.validate_catalog())
+        self.assertTrue(check.validate_shape())
+        catalog = json.loads(original)
+        catalog["skills"]["writing-for-agents"]["requires"] = ["to-spec"]
+        path.write_text(json.dumps(catalog))
+        self.assertTrue(any("cyclic" in error for error in check.validate_catalog()))
+
+    def test_upstream_notice_cannot_be_silently_dropped(self) -> None:
+        path = self.root / "catalog.json"
+        catalog = json.loads(path.read_text())
+        catalog["skills"]["to-spec"]["upstreamNotice"] = None
+        path.write_text(json.dumps(catalog))
+        self.assertTrue(any("upstream attribution missing" in error for error in check.validate_catalog()))
+
+    def test_adapted_workflow_requires_pinned_public_source_and_licence(self) -> None:
+        path = self.root / "catalog.json"
+        original = path.read_text()
+        for mode in ["missing", "revision", "license", "path", "notice"]:
+            catalog = json.loads(original)
+            provenance = catalog["skills"]["workflow-guide"]["provenance"]
+            if mode == "missing":
+                provenance.pop("upstream")
+            else:
+                field, value = {"revision": ("revision", "main"), "license": ("license", "unknown"),
+                                "path": ("path", "../private"), "notice": ("licenseFile", "missing.txt")}[mode]
+                provenance["upstream"][field] = value
+            path.write_text(json.dumps(catalog))
+            with self.subTest(mode=mode):
+                self.assertTrue(any("public upstream provenance" in error for error in check.validate_catalog()))
+
+    def test_digest_guard_rejects_changed_resource(self) -> None:
+        resource = self.root / "skills/to-spec/assets/prd-template.md"
+        resource.write_text(resource.read_text() + "\nchanged resource\n")
+        self.assertTrue(any("digest mismatch" in error for error in check.validate_catalog()))
+
+    def test_catalog_rejects_escape_and_missing_dependency(self) -> None:
+        path = self.root / "catalog.json"
+        catalog = json.loads(path.read_text())
+        catalog["skills"]["to-spec"]["files"]["../outside"] = "a" * 64
+        catalog["skills"]["to-spec"]["requires"].append("private-skill")
+        path.write_text(json.dumps(catalog))
+        errors = check.validate_catalog()
+        self.assertTrue(any("invalid resource path" in error for error in errors))
+        self.assertTrue(any("unavailable dependency" in error for error in errors))
 
     def test_rejects_duplicate_frontmatter_field(self) -> None:
         content = self.skill_file.read_text(encoding="utf-8")
@@ -64,6 +116,16 @@ class CheckTests(unittest.TestCase):
             encoding="utf-8",
         )
 
+        self.assertTrue(check.validate_agent_metadata())
+
+    def test_rejects_invocation_policy_disagreement(self) -> None:
+        path = self.root / 'skills/setup-agent-workflows/agents/openai.yaml'
+        path.write_text(path.read_text().replace('allow_implicit_invocation: false', 'allow_implicit_invocation: true'))
+        self.assertTrue(any('invocation policy disagrees' in error for error in check.validate_agent_metadata()))
+
+    def test_rejects_unclosed_frontmatter_without_crashing_metadata_check(self) -> None:
+        self.skill_file.write_text('---\nname: meeting-runner\n')
+        self.assertTrue(check.validate_frontmatter())
         self.assertTrue(check.validate_agent_metadata())
 
     def test_rejects_an_extra_skill(self) -> None:
@@ -97,6 +159,11 @@ class CheckTests(unittest.TestCase):
         self.assertTrue(
             any("symbolic links are not allowed" in error for error in check.validate_shape())
         )
+
+    def test_windows_junction_attribute_is_classified_as_linked(self) -> None:
+        path = self.root / 'junction'
+        with patch.object(Path, 'is_symlink', return_value=False), patch.object(Path, 'lstat', return_value=SimpleNamespace(st_file_attributes=0x400)):
+            self.assertTrue(check.is_linked_path(path))
 
     def test_rejects_a_broken_relative_link(self) -> None:
         self.skill_file.write_text(

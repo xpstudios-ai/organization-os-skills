@@ -1,0 +1,421 @@
+{
+  "schemaVersion": 1,
+  "status": "local-review-candidate",
+  "skills": {
+    "meeting-runner": {
+      "requires": [],
+      "conditional": [
+        "triage",
+        "repo-document"
+      ],
+      "files": {
+        "SKILL.md": "f0f214c041161da2072726883ba1dfa537388867ce71ecf548aa43d5cac4cdc2",
+        "agents/openai.yaml": "4e14d9a079265cf3f662adbef9d244bb2c005648f5fa8e0e1eef837ab431f800",
+        "assets/pre-call-brief-template.md": "aa772fd598dad07855a4169edd0c3875402e07ad426a1866363a38702d2e97a2",
+        "references/canonical-meeting-notes.md": "15fce31e94295380b15da6efd77c6bf97d4adab1bac73d2cadaf059254f06381",
+        "references/preparation-workflow.md": "3ec379bc645674f6c798525a24e7cbd299ba1765bc2b71a25ad0cf79e0a3ebb1",
+        "references/synthesis-workflow.md": "a7eb789fa889cb73638159f1c2f2946dfea53000d829d27f6d7ed31baeb0fe8b",
+        "references/transcript-ingestion.md": "352a1d727ffdbd4aa1675f0d50d6f88aa1b554d0d179e203caebc0c4e9a56b60"
+      },
+      "upstreamNotice": null,
+      "provenance": {
+        "owner": "organization-os-skills",
+        "revision": "90b2e6c8fe8ac358c1588015a441188831bf46bc",
+        "mode": "public-variant",
+        "clearance": "existing-public-package"
+      }
+    },
+    "to-spec": {
+      "requires": [
+        "codebase-design",
+        "handoff",
+        "writing-for-agents"
+      ],
+      "conditional": [
+        "codebase-design",
+        "to-tickets"
+      ],
+      "files": {
+        "SKILL.md": "4743d1c6758ffcd421c2ac9b1e7c84d24ba1990bd3e09039ea1943aba49b57d4",
+        "UPSTREAM-LICENSE.txt": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
+        "agents/openai.yaml": "84776f0b78bb80b0003058faadb1ce9ce98fedad00bc5c564b6d6fff735a650f",
+        "assets/prd-template.md": "3778d5770f0b546bef79ea318cf20a93237a189028288b84bd75387bc0bd9071"
+      },
+      "upstreamNotice": "UPSTREAM-LICENSE.txt",
+      "provenance": {
+        "owner": "xp-skills",
+        "revision": "572c9d2ab17bb074d92f6e95d8ca31bd4872b078",
+        "mode": "byte-identical",
+        "clearance": "notice-retained",
+        "upstream": {
+          "repository": "https://github.com/mattpocock/skills",
+          "revision": "49dd158d1076134a641b33efb035946536778336",
+          "path": "skills/engineering/to-spec",
+          "license": "MIT",
+          "licenseFile": "LICENSES/Matt-Pocock-MIT.txt"
+        },
+        "candidateFolderSha256": "587a70a07e80633bb61cac92f6994f07a3ba6bd2e22dbb72e654a28d470c5257"
+      }
+    },
+    "to-tickets": {
+      "requires": [
+        "handoff",
+        "triage"
+      ],
+      "conditional": [],
+      "files": {
+        "SKILL.md": "c21edb2e84a236843c3f6d6d7e95d9c275ad9916159659b2251385a1a9c53bcc",
+        "UPSTREAM-LICENSE.txt": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
+        "agents/openai.yaml": "dfbd8dfb5bbc579500fa2ec61a05e0bfdc0697c52683eb96d5fc1d601a61358d",
+        "assets/issue-template.md": "0eef0caf61a873f66b966bfe9de48c135be4191057822aad82f35f4e98e37404"
+      },
+      "upstreamNotice": "UPSTREAM-LICENSE.txt",
+      "provenance": {
+        "owner": "xp-skills",
+        "revision": "572c9d2ab17bb074d92f6e95d8ca31bd4872b078",
+        "mode": "byte-identical",
+        "clearance": "notice-retained",
+        "upstream": {
+          "repository": "https://github.com/mattpocock/skills",
+          "revision": "49dd158d1076134a641b33efb035946536778336",
+          "path": "skills/engineering/to-tickets",
+          "license": "MIT",
+          "licenseFile": "LICENSES/Matt-Pocock-MIT.txt"
+        },
+        "candidateFolderSha256": "8c01caaefc0c6984537df20bc71d402b35f68beae4ab2f179fb18c7b95b8caa9"
+      }
+    },
+    "triage": {
+      "requires": [],
+      "conditional": [],
+      "files": {
+        "SKILL.md": "fe12d888872fdf235cb2239607a65b2cab8b58a8a08a2a4c92925b0775b6599e",
+        "UPSTREAM-LICENSE.txt": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
+        "agents/openai.yaml": "9ff91843434f708567b5f6dbf1ea9a50beff1f6e4d1699a055598374b2b87213",
+        "references/agent-brief.md": "207f253f8f614cfc8623b2810a81ec07ed833adb5c33eebcc59fcaaf9ffc31be",
+        "references/execution-admission.md": "8be0e61901791cc4d3711938096e92f0aea13e3d568cfb867efb51d1eb3cf8ad",
+        "references/triage-state-machine.md": "42b8b7edcd787401f04a8dd5fac530bf46c2dd0f1f80be64408cd4305d9cead6"
+      },
+      "upstreamNotice": "UPSTREAM-LICENSE.txt",
+      "provenance": {
+        "owner": "xp-skills",
+        "revision": "572c9d2ab17bb074d92f6e95d8ca31bd4872b078",
+        "mode": "byte-identical",
+        "clearance": "notice-retained",
+        "upstream": {
+          "repository": "https://github.com/mattpocock/skills",
+          "revision": "49dd158d1076134a641b33efb035946536778336",
+          "path": "skills/engineering/triage",
+          "license": "MIT",
+          "licenseFile": "LICENSES/Matt-Pocock-MIT.txt"
+        },
+        "candidateFolderSha256": "30a4be21bfc5dc6560cc034ffeb79fd61be5fa1e58032adda8dc61ab1885ce65"
+      }
+    },
+    "handoff": {
+      "requires": [],
+      "conditional": [],
+      "files": {
+        "SKILL.md": "86094b4d95b1c17a7fd615650ec46591e4f46e922b31dcc0a1d57adee108fb3d",
+        "agents/openai.yaml": "935eee9a20a5ed24b911a29aa6904b913f90824ee04049b13cea8d370a354a5e",
+        "references/domain-docs.md": "c391609de7ca2688b4d09a9af979873b8df673778448074580821944bc3633d9",
+        "references/persistence.md": "61cca8b3260b14b82d41bc836542ed64e29d7c3c8b16a901860b3b2c26aa51cf",
+        "references/repository-context.md": "b0f956c12a7222704224509644e47b8c753676c881dc44c209321c644038e625"
+      },
+      "upstreamNotice": null,
+      "provenance": {
+        "owner": "xp-skills",
+        "revision": "572c9d2ab17bb074d92f6e95d8ca31bd4872b078",
+        "mode": "byte-identical",
+        "clearance": "notice-retained",
+        "upstream": {
+          "repository": "https://github.com/mattpocock/skills",
+          "revision": "49dd158d1076134a641b33efb035946536778336",
+          "path": "skills/productivity/handoff",
+          "license": "MIT",
+          "licenseFile": "LICENSES/Matt-Pocock-MIT.txt"
+        },
+        "candidateFolderSha256": "8015ae84b9d25110a0e0509f6f3e98791bfabbf2c820cb4341a4d16aa0cb0f85"
+      },
+      "packageNotice": "LICENSES/Matt-Pocock-MIT.txt"
+    },
+    "repo-review": {
+      "requires": [],
+      "conditional": [
+        "codebase-design",
+        "repo-document"
+      ],
+      "files": {
+        "SKILL.md": "44575051994ce38323dae1ee476e2b5a8e06cf30d482ad3a601bed35e857737c",
+        "UPSTREAM-LICENSE.txt": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
+        "agents/openai.yaml": "cd479b034b534473e72f10e333b9d5381f24275266781028ba0709808a9115d4",
+        "references/code-change-baseline.md": "8be364ae0ed2b418e275874bc2938e42d0d77b53b6689dcc541b95a61aceb8a6",
+        "references/refactoring.md": "908221a52e60db47bc34e181b3dc7cf855ad170688c788b89aa20075f57bac36"
+      },
+      "upstreamNotice": "UPSTREAM-LICENSE.txt",
+      "provenance": {
+        "owner": "xp-skills",
+        "revision": "572c9d2ab17bb074d92f6e95d8ca31bd4872b078",
+        "mode": "byte-identical",
+        "clearance": "notice-retained",
+        "upstream": {
+          "repository": "https://github.com/mattpocock/skills",
+          "revision": "49dd158d1076134a641b33efb035946536778336",
+          "path": "skills/engineering/code-review",
+          "license": "MIT",
+          "licenseFile": "LICENSES/Matt-Pocock-MIT.txt"
+        },
+        "candidateFolderSha256": "ac7980cd71c667b0fbe1881b2fbfc0ec61fe0d2ed68cd5316fbb94b54ab1f42f"
+      }
+    },
+    "repo-document": {
+      "requires": [],
+      "conditional": [],
+      "files": {
+        "SKILL.md": "710e3d22335e479be3ff6a6f5891700fbe6459d575f6bf73bdf7a831be424f0c",
+        "agents/openai.yaml": "7bc07e9ef92a7a621a8e19c70cd1e9a8893a23ac1cefb85626e5cb89f3da0d52"
+      },
+      "upstreamNotice": null,
+      "provenance": {
+        "owner": "xp-skills",
+        "revision": "572c9d2ab17bb074d92f6e95d8ca31bd4872b078",
+        "mode": "byte-identical",
+        "clearance": "approved-public-reuse",
+        "candidateFolderSha256": "0cd1e8fa102e27e227b2a3c275e220b79989eb1806fb986a6f77780ffa7b7093"
+      }
+    },
+    "diagnose": {
+      "requires": [
+        "codebase-design",
+        "handoff"
+      ],
+      "conditional": [
+        "repo-review",
+        "repo-document"
+      ],
+      "files": {
+        "SKILL.md": "0a90a135cdcd2baf0d3be4c353f4024eb6397b0745a0b561038dbc3fd455d628",
+        "UPSTREAM-LICENSE.txt": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
+        "agents/openai.yaml": "0a29417bed7ff8172828aaf0a06030b0b4f3f108b7059cf1412d7c35dfee1f0f",
+        "references/domain-docs.md": "f7734789f42c79017701e4dce58ff6d651e71679952a83b509c22cc4f2573cdd",
+        "references/feedback-loop.md": "e219fa3624289c4ea1846d56ccb4aee528c61959e2f1cf89bc796dbfd8ee5983",
+        "scripts/hitl-loop.template.ps1": "9c6721e874080fb464c89b86ff1079e1d76af016f87efaeb6d5536ddea661c5e",
+        "scripts/hitl-loop.template.sh": "b7dd7d8ef40a9a375c78c6e4b497d70926fb12bf3270cddc07f0a6e2d98377c0"
+      },
+      "upstreamNotice": "UPSTREAM-LICENSE.txt",
+      "provenance": {
+        "owner": "xp-skills",
+        "revision": "572c9d2ab17bb074d92f6e95d8ca31bd4872b078",
+        "mode": "byte-identical",
+        "clearance": "notice-retained",
+        "upstream": {
+          "repository": "https://github.com/mattpocock/skills",
+          "revision": "49dd158d1076134a641b33efb035946536778336",
+          "path": "skills/engineering/diagnosing-bugs",
+          "license": "MIT",
+          "licenseFile": "LICENSES/Matt-Pocock-MIT.txt"
+        },
+        "candidateFolderSha256": "a5d3ea273e85de150e237baec3a145b5d91d2ad7b6742961c8a7e75ae31761cf"
+      }
+    },
+    "codebase-design": {
+      "requires": [
+        "handoff"
+      ],
+      "conditional": [],
+      "files": {
+        "DEEPENING.md": "f3dd099ce99289bd213914d8ee3e2429b78309c3957ca4583f7659551b1d53c1",
+        "DESIGN-IT-TWICE.md": "52b52e75655a27aea59c6966b410bac82448968ad46ef1ebb9f07c274e3ae010",
+        "SKILL.md": "2c20617f87ec8af6a434859f381b2f061a69b530444e74eb39e78bb016a6d1e2",
+        "agents/openai.yaml": "edebc9e4fcfe102114012575eaa9600b9b5fd08c311664f389c36e7bc717740f"
+      },
+      "upstreamNotice": null,
+      "provenance": {
+        "owner": "xp-skills",
+        "revision": "572c9d2ab17bb074d92f6e95d8ca31bd4872b078",
+        "mode": "byte-identical",
+        "clearance": "notice-retained",
+        "upstream": {
+          "repository": "https://github.com/mattpocock/skills",
+          "revision": "49dd158d1076134a641b33efb035946536778336",
+          "path": "skills/engineering/codebase-design",
+          "license": "MIT",
+          "licenseFile": "LICENSES/Matt-Pocock-MIT.txt"
+        },
+        "candidateFolderSha256": "e91e18258598832efe27af7e3c423ab262c6f8b8ecb6262d8fbb80d626ef0e19"
+      },
+      "packageNotice": "LICENSES/Matt-Pocock-MIT.txt"
+    },
+    "writing-for-agents": {
+      "requires": [
+        "handoff"
+      ],
+      "conditional": [],
+      "files": {
+        "SKILL-MECHANICS.md": "c768e6307c7c10728c401c213f2c4ba71c542127eeb7ad2956aabd15a0fa0059",
+        "SKILL.md": "551adca942227b44192edba88acd4e8db911f0121ce58ad16944ccf6a896a74a",
+        "agents/openai.yaml": "eacb24b2a618cfb81dacb0416f4fdd75ddf3a8060f8ddb99aae1b1e301907e4b"
+      },
+      "upstreamNotice": null,
+      "provenance": {
+        "owner": "xp-skills",
+        "revision": "572c9d2ab17bb074d92f6e95d8ca31bd4872b078",
+        "mode": "byte-identical",
+        "clearance": "notice-retained",
+        "upstream": {
+          "repository": "https://github.com/mattpocock/skills",
+          "revision": "49dd158d1076134a641b33efb035946536778336",
+          "path": "skills/productivity/writing-for-agents",
+          "license": "MIT",
+          "licenseFile": "LICENSES/Matt-Pocock-MIT.txt"
+        },
+        "candidateFolderSha256": "dc53f07d1f662137317789b9b5d74cfcc26dbcfc15038a7faf676c844d8638e8"
+      },
+      "packageNotice": "LICENSES/Matt-Pocock-MIT.txt"
+    },
+    "setup-agent-workflows": {
+      "requires": [
+        "handoff"
+      ],
+      "conditional": [],
+      "files": {
+        "SKILL.md": "b48671377e8b11c0f4ee6e0ddfaa4f97310c033caa53949f06bd1a388564a6d8",
+        "agents/openai.yaml": "a388e5937e539ed7c0af6cd0ee6424d21958055dc66ab01f917b324434e14632",
+        "references/adapter-catalog.md": "eb87ef50912b1bb66d113de4685adbd2661a327c253ed36becdbbe567c91efcd",
+        "references/domain-docs.md": "3da4ef6322b07bfefbb4ce076f3363547e985bfbf3962649a57592e0ca0c3737",
+        "references/issue-tracker-github.md": "cb54a7fb71c789ed303afc84c7aeee20ebf1d6e7b48fde236ee95228c8359a51",
+        "references/issue-tracker-in-repo.md": "2d82b19dbbaed3f303c8fa211ca76c2f7a5b027da8ba506d2b6d3fafafdbef5f",
+        "references/issue-tracker-interactive.md": "3fa4f4320790ed51155daabe38decca50870d9dced3164cf17be5a636b80fdfb",
+        "references/issue-tracker-jira.md": "15585c971433a7106efa9000ee1dca1d39fcd2e06788de9cd4a31197927fea8c",
+        "references/issue-tracker-linear.md": "48a46e9a58d2e272edd6d5fb52a0b0b92552710b871673edcda922f0bd85bfcd",
+        "references/meeting-records-confluence.md": "3d3824260e0d5f1379b500e2a124b4a8abbfc25826c76896be99ded6fa49185a",
+        "references/meeting-records-draft-only.md": "ae08217c42df26e8742ce90617b2a63fc188ce3778340762a4728f09997560bc",
+        "references/meeting-records-in-repo.md": "63be347a7aff4323e48ce83abc18b1fa2e07d5b1973ad82018c6bd48820ab82f",
+        "references/meeting-records-notion.md": "ad5901d88a07778d2000c442f60c022b4d63c5f1dd7f630025bf78cf3580961e",
+        "references/spec-source-confluence.md": "c9fe57299cbe881cfaf7230fc9e61906a58573afb451d76e0e30aeed0669c478",
+        "references/spec-source-in-repo.md": "1c871f4f507c61729855c00c9623e10c40c80fb4191f425d52e4d77c40a13160",
+        "references/spec-source-notion.md": "62c57f628ccb8dbc4c47ff2a4d492882d43a64a92e2d3624ed7ed2cde1c0e0fd",
+        "references/spec-source-tracker.md": "c7f7b0009ae7e662423952f1783fdc8a3c579128b24af0906aae743e1c8457b5",
+        "references/triage-states-linear.md": "befd880250e463ed406cffe56cfd3980dee2b1b2a06a7232e37f9c2fee494b41",
+        "references/triage-states.md": "3f4c4a04c55cc2be93d15c3d24571efd1b9bf508c4ddf6663110e758fec761c8"
+      },
+      "upstreamNotice": null,
+      "provenance": {
+        "owner": "xp-skills",
+        "revision": "572c9d2ab17bb074d92f6e95d8ca31bd4872b078",
+        "mode": "byte-identical",
+        "clearance": "notice-retained",
+        "upstream": {
+          "repository": "https://github.com/mattpocock/skills",
+          "revision": "49dd158d1076134a641b33efb035946536778336",
+          "path": "skills/engineering/setup-matt-pocock-skills",
+          "license": "MIT",
+          "licenseFile": "LICENSES/Matt-Pocock-MIT.txt"
+        },
+        "candidateFolderSha256": "007301ddc4522f5088f78401c5ac4cd0b15a1c2e3135a9ba25e30bd53678c47a"
+      },
+      "packageNotice": "LICENSES/Matt-Pocock-MIT.txt"
+    },
+    "qualify-opportunity": {
+      "requires": [],
+      "conditional": [],
+      "files": {
+        "SKILL.md": "220ed03ef832a4b4d15bd412709c9deea94c162c4bc053e040a29676b518b8b3",
+        "agents/openai.yaml": "c2a51f107ce755f5c309522485b476239a4cc639c8639f4631dac323a54e58a1",
+        "assets/assessment-template.md": "f43544fd4d11f4ad8ac044102059ae422e406380ceebe45931b76d28644e0acd",
+        "references/business-workspace.md": "23ee70d416565a14b55897f4d3a91be1bb69019efc8e0de3ab7f02119e75c3a7",
+        "references/conditional-sections.md": "39f01b291f6806b8ef9da5e671a23d001fb6c758a79847fce0439dad9a271ccc",
+        "references/engagement-shape.md": "a9efd6eaaf8ed9e0a3fc63d925e29b1ed254084c73121c26d31400cefa25a855",
+        "references/input-output-routing.md": "2f4485fc63ba473d732065393e55d1feab3c24f66a19b09f0337120ef627ba0b",
+        "references/qualification-core.md": "46a390f24941782e156f376e45684d10562368ba78998df64a578f3f345e5924"
+      },
+      "upstreamNotice": null,
+      "provenance": {
+        "owner": "organization-os-skills",
+        "mode": "portable-synthesis",
+        "clearance": "approved-public-reuse"
+      }
+    },
+    "workflow-guide": {
+      "requires": [
+        "handoff"
+      ],
+      "conditional": [],
+      "files": {
+        "SKILL.md": "4ca827a58e8f7ebb328b2c5b35c048d69d71f2c8af6f3cd4fabc1a3c69d48efd",
+        "UPSTREAM-LICENSE.txt": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
+        "agents/openai.yaml": "1d1111cbde8f754e5b86106a13f3ec4f7e81b6254c9c666c631b86d33ec64110"
+      },
+      "upstreamNotice": "UPSTREAM-LICENSE.txt",
+      "provenance": {
+        "owner": "xp-skills",
+        "revision": "572c9d2ab17bb074d92f6e95d8ca31bd4872b078",
+        "mode": "byte-identical",
+        "clearance": "notice-retained",
+        "upstream": {
+          "repository": "https://github.com/mattpocock/skills",
+          "revision": "49dd158d1076134a641b33efb035946536778336",
+          "path": "skills/engineering/ask-matt",
+          "license": "MIT",
+          "licenseFile": "LICENSES/Matt-Pocock-MIT.txt"
+        },
+        "candidateFolderSha256": "9ba688273951424318252a852e7a868e15ddfa3ad54e77a8d2eab3975e1dd0b6"
+      }
+    },
+    "to-questionnaire": {
+      "requires": [
+        "handoff"
+      ],
+      "conditional": [],
+      "files": {
+        "SKILL.md": "b0f90ab2a1541a22c7e83ad64515e6323659f1be9885ce4047ffa3b140e1541c",
+        "UPSTREAM-LICENSE.txt": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
+        "agents/openai.yaml": "296aeaf16e3ffbc6611a114df84a86693d036d3b75820324aa86beed1ddc2b60"
+      },
+      "upstreamNotice": "UPSTREAM-LICENSE.txt",
+      "provenance": {
+        "owner": "xp-skills",
+        "revision": "572c9d2ab17bb074d92f6e95d8ca31bd4872b078",
+        "mode": "byte-identical",
+        "clearance": "notice-retained",
+        "upstream": {
+          "repository": "https://github.com/mattpocock/skills",
+          "revision": "49dd158d1076134a641b33efb035946536778336",
+          "path": "skills/productivity/to-questionnaire",
+          "license": "MIT",
+          "licenseFile": "LICENSES/Matt-Pocock-MIT.txt"
+        },
+        "candidateFolderSha256": "11b3fd703f451af7337fdbe5dbc44e4ce323c7335277b381ed97cde728b64fa8"
+      }
+    },
+    "workflow-retro": {
+      "requires": [
+        "handoff"
+      ],
+      "conditional": [],
+      "files": {
+        "SKILL.md": "fd2c5f53aba6561e3d8ebb3b13e5d0505718a957940b1eed0fead3cea6d7a6d0",
+        "UPSTREAM-LICENSE.txt": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
+        "agents/openai.yaml": "3f3dfe1c40f5ceb703fcd5c47ab7ba85e928917a3e66b20a78ba82d5d394016a"
+      },
+      "upstreamNotice": "UPSTREAM-LICENSE.txt",
+      "provenance": {
+        "owner": "xp-skills",
+        "revision": "572c9d2ab17bb074d92f6e95d8ca31bd4872b078",
+        "mode": "byte-identical",
+        "clearance": "notice-retained",
+        "upstream": {
+          "repository": "https://github.com/mattpocock/skills",
+          "revision": "49dd158d1076134a641b33efb035946536778336",
+          "path": "skills/engineering/retro",
+          "license": "MIT",
+          "licenseFile": "LICENSES/Matt-Pocock-MIT.txt"
+        },
+        "candidateFolderSha256": "1b594d12bd7f81286c77ab2b4f937c9e7b0785fd223d66c8daf2dc5c45bfdf44"
+      }
+    }
+  },
+  "packageNotices": {
+    "LICENSES/Matt-Pocock-MIT.txt": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5"
+  }
+}
