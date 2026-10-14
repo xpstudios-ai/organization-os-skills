@@ -1,0 +1,16 @@
+{
+  "name": "xpstudios",
+  "owner": {
+    "name": "xpstudios",
+    "url": "https://github.com/xpstudios-ai"
+  },
+  "description": "Organization OS workflows for reviewed decisions and owned next actions.",
+  "plugins": [
+    {
+      "name": "organization-os",
+      "source": "./plugins/organization-os",
+      "description": "Turn meeting notes into reviewed decisions and owned next actions with Meeting Runner.",
+      "category": "productivity"
+    }
+  ]
+}

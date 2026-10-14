@@ -1,0 +1,29 @@
+{
+  "name": "organization-os",
+  "version": "1.0.0",
+  "description": "Turn meeting notes into reviewed decisions and owned next actions with Meeting Runner.",
+  "author": {
+    "name": "xpstudios",
+    "url": "https://github.com/xpstudios-ai"
+  },
+  "homepage": "https://github.com/xpstudios-ai/organization-os-skills",
+  "repository": "https://github.com/xpstudios-ai/organization-os-skills",
+  "license": "Apache-2.0",
+  "keywords": [
+    "meetings",
+    "decisions",
+    "actions",
+    "organization"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Organization OS",
+    "shortDescription": "Meeting decisions and actions",
+    "longDescription": "Use Meeting Runner with your own connected services. Review the decisions before your agent saves the agreed result.",
+    "developerName": "xpstudios",
+    "category": "Productivity",
+    "defaultPrompt": [
+      "Use Meeting Runner to turn these meeting notes into decisions and owned next actions. Show me the draft before saving."
+    ]
+  }
+}
