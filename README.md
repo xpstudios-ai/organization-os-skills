@@ -4,6 +4,8 @@ Provider-neutral workflows for connected operating records and authorized agent
 work. **Organization OS 1.1.0 includes fifteen skills.** The Notion template and
 these skills have separate ownership and release processes.
 
+Several workflows are adapted from [Matt Pocock’s skills](https://github.com/mattpocock/skills). His MIT copyright and licence notices are retained; see [NOTICE.md](NOTICE.md).
+
 For repository design and agent-instruction authoring, preserve the existing
 `.agents/*-standards.md` overlays and legacy `CONTEXT.md` routes. Read
 [repository context](skills/handoff/references/repository-context.md) before
@@ -183,10 +185,6 @@ workspace's meeting, specification, tracker and documentation routes. Invoke a
 skill in an agent that supports the skill format. Small approved work need not
 pass through every workflow. Instructions guide existing authorized agents;
 installation does not grant new permissions or provide an autonomous manager.
-
-## Acknowledgements
-
-Several workflows are adapted from [Matt Pocock’s skills](https://github.com/mattpocock/skills). His MIT copyright and licence notices are retained; see [NOTICE.md](NOTICE.md).
 
 ## Validate and contribute
 
