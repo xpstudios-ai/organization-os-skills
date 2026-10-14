@@ -2,10 +2,11 @@
 
 Organization OS currently targets local Codex and Claude Code. Business users
 connect their workspace and let the agent manage personal setup; no working-folder
-selection is required. Repository users retain their existing project. Codex
-uses a configured local marketplace source
-and the desktop Plugins screen; Claude Code uses its marketplace and `/plugin`
-commands. Terminal details and editable folder alternatives are under Advanced
+selection is required. Repository users retain their existing project. In the
+tested macOS Codex client, a plain-language installation request lets the agent
+register the public Git marketplace and install through the existing host CLI;
+the user does not open a terminal. Claude Code uses its marketplace and in-chat
+`/plugin` commands. Terminal details and editable folder alternatives are under Advanced
 in the README. Public directory and ChatGPT/Claude web routes remain pending.
 The 1.1.0 release contains the selected fifteen generic workflows.
 The earlier 1.0.0 release remains the immutable Meeting Runner-only starter. Adding a
@@ -54,10 +55,13 @@ version or a lower version, and refuses a later release without that receipt.
 
 1. Use Codex or Claude Code. Preserve existing instructions and avoid duplicate
    same-name skill installations. No business working-folder choice is needed.
-2. Follow the README's Advanced commands for the released `plugin-release`
-   marketplace. Codex installs from its configured local source in the desktop
-   app; Claude Code installs through `/plugin`. Version 1.1.0 installs the
-   complete fifteen-skill suite. Confirm the installed version after updating.
+2. In Codex, paste the README's installation request and let the agent register
+   the released `plugin-release` marketplace and install Organization OS. Approve
+   normal host permission prompts. A restricted or unsupported client must
+   report the missing capability. Manual commands are an Advanced alternative;
+   they are not required user actions in the tested flow. Claude Code's in-chat
+   `/plugin` route remains available with its authenticated-use limit below.
+   Version 1.1.0 installs all fifteen skills. Confirm the version after updating.
 3. Start a fresh session and confirm Meeting Runner with its supporting files.
 4. Connect Notion separately, verify account/workspace, and discover the intended
    copy's Source of Truth Map through its home links. On a request to remember
@@ -66,11 +70,21 @@ version or a lower version, and refuses a later release without that receipt.
    Local personal settings can supply the same routing contract without Notion.
 5. Draft one meeting, approve its save and read back the saved record.
 
-Codex fresh-process recall from another empty directory passed with a local
-fictional map. This is distinct from live Notion account/copy access. Claude Code
-inference remains unverified because the installed test client is not signed in.
-Agent-assisted installation and the complete recipient walkthrough remain under
-acceptance. Keep user settings, files and credentials outside plugin resources.
+Native macOS Codex acceptance covers a plain-language public marketplace install,
+preserved personal instructions, fresh-process recall from an ordinary directory
+outside Git, and live account/home/map/Meetings verification. Meeting Runner
+produced a draft without writes, then saved the approved fictional meeting through
+the native Meeting template and fetched the completed table back. A correction
+updated the same record, preserved a human note and left one matching meeting.
+Normal host write approvals still apply. If a save is interrupted or denied,
+inspect the existing page before retrying so a partial record is completed
+without creating a duplicate.
+
+These tests used an existing authenticated native Notion connection and fictional
+records in the editable publisher template. They do not establish a new user's
+OAuth sign-in or a human recipient walkthrough. Claude Code inference remains
+unverified because the installed test client is signed out; native Windows and
+web-client use remain unverified. Keep settings and files outside plugin resources.
 See the business setup contract for the native personal-instruction route and
 safe per-chat fallback; neither lifecycle hooks nor a custom settings service
 is introduced. The skills-only package does not claim web-client persistence.

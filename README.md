@@ -25,18 +25,27 @@ from the public release marketplace or its complete ZIP. Public app-directory
 listings, ChatGPT web and Claude web routes remain pending acceptance.
 Version 1.0.0 remains available as the earlier Meeting Runner-only starter.
 
-- **Codex:** add the public release marketplace with the CLI, then install
-  Organization OS from the **xpstudios local source** in the desktop app.
-- **Claude Code:** add the public xpstudios marketplace and install Organization
-  OS using Claude Code's `/plugin` commands.
+**In Codex, ask the agent to install it for you:**
 
-The commands are under Advanced below. Start a fresh session and confirm that
-Meeting Runner and its supporting files are available. Use one installation
-method for each skill; identify an existing copy before changing it.
-Agent-assisted installation and a complete recipient walkthrough remain under
-acceptance. The isolated Codex tests establish local discovery,
-updates and draft behavior; they do not prove live Notion account/copy routing
-or Claude Code inference.
+> Install Organization OS from the public xpstudios marketplace in
+> xpstudios-ai/organization-os-skills, using its plugin-release branch. Do the
+> installation for me, preserve existing skills and settings, and verify version
+> 1.1.0, Meeting Runner and Workflow Guide with their supporting files. Tell me
+> when to start a new chat. If this client cannot install it, explain what is
+> missing; do not ask me to run terminal commands.
+
+On the tested macOS Codex client, the agent registers the marketplace and installs
+the plugin using the installed host tools. You do not open a terminal or choose a
+business folder. Approve the app's normal permission prompts if shown. Start a
+new chat afterward; reopen the app only if the skills do not appear. Managed
+restrictions or a client without the supported installer can still prevent setup;
+the agent must report that limitation rather than silently copy skills elsewhere.
+
+**Claude Code alternative:** use the in-chat `/plugin` commands under Advanced.
+Native installation and updates passed; the full setup and meeting flow remains
+unverified. Use Codex for the verified route. Windows and web-client
+acceptance are also separate. Use one installation method per skill; preserve
+and identify any existing copy before changing it.
 
 Follow Start Here in your own Notion copy to connect services separately. Give
 the agent that copy's home link and ask:
@@ -48,7 +57,9 @@ the agent that copy's home link and ask:
 
 The agent manages a short personal startup preference, outside the replaceable
 plugin. Start a new chat and ask which copy and map it is using, without giving
-the links again. If recall or access fails, provide the home link for that chat;
+the links again. Have it check the live Notion account and workspace with the
+current-account tool; a saved label or workspace member list is insufficient.
+If recall or access fails, provide the home link for that chat;
 keep drafts unsaved until the destination is verified. Changing computers or
 clients requires a new setup check. See the [business setup and recall contract](CONTRACT.md#business-setup-and-recall).
 Qualification and repository scaffolding are not setup prerequisites. The map
