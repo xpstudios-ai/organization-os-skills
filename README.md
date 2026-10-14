@@ -4,6 +4,9 @@ Fifteen practical workflows for your AI agent, from meeting follow-through and
 customer decisions to software planning and review. Start with one useful
 result, then use the other skills as you need them.
 
+Use these skills with the [Organization OS Notion template](https://kindly-sheep-d3b.notion.site/Organization-OS-Template-3f93015a8e068113bf2ecbffa1edaf90),
+or in your existing project.
+
 Several workflows are adapted from [Matt Pocock’s skills](https://github.com/mattpocock/skills). His MIT copyright and licence notices are retained; see [NOTICE.md](NOTICE.md).
 
 ## Choose your agent
