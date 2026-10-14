@@ -1,0 +1,34 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "organization-os",
+  "version": "1.1.0",
+  "description": "Prepare meetings, assess opportunities and move approved work through planning, review and follow-through with your own agent.",
+  "author": {
+    "name": "xpstudios",
+    "url": "https://github.com/xpstudios-ai"
+  },
+  "homepage": "https://github.com/xpstudios-ai/organization-os-skills",
+  "repository": "https://github.com/xpstudios-ai/organization-os-skills",
+  "license": "Apache-2.0",
+  "keywords": [
+    "meetings",
+    "decisions",
+    "planning",
+    "operations"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Organization OS",
+        "shortDescription": "Meetings, plans and next steps",
+        "longDescription": "Organization OS provides fifteen generic workflows for meeting follow-through, opportunity assessment, planning and engineering. Use Workflow Guide to choose the next useful step. Connect services separately and review decisions before authorizing saves.",
+        "developerName": "xpstudios",
+        "category": "Productivity",
+        "defaultPrompt": [
+          "Use Workflow Guide to choose the next useful workflow for this task.",
+          "Use Meeting Runner with these notes. Draft decisions and owned actions for my review before saving."
+        ]
+      }
+    }
+  }
+}

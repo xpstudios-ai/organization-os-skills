@@ -1,0 +1,6 @@
+interface:
+  display_name: "Setup Agent Workflows"
+  short_description: "Set up repo agent workflow"
+  default_prompt: "Use $setup-agent-workflows to set up this repository's agent workflow configuration."
+policy:
+  allow_implicit_invocation: false

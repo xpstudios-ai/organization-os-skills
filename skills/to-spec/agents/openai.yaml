@@ -1,0 +1,6 @@
+interface:
+  display_name: "To Spec"
+  short_description: "Draft specifications"
+  default_prompt: "Use $to-spec to turn this context into a specification."
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "name": "organization-os",
+  "version": "1.0.0",
+  "selectedSkills": [
+    "meeting-runner"
+  ],
+  "files": {
+    ".claude-plugin/plugin.json": "b4c404373e4686e2767901a90706d14add959f73a444e5ab40233aa00671e86c",
+    ".codex-plugin/plugin.json": "3f417bd62c190f03bda64637a3cd03c6a99c976b1657f1fe890653a1ed279958",
+    "LICENSE": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "README.md": "df7fafb006065ba2f1c3e7848eb800a1a07191f43beed29220538ded8cf7afa3",
+    "plugin.json": "c8b96dd5235c2ffcd81dbc32b2d8326fb4ef757c0337ba2b60b17e32108ead8c",
+    "skills/meeting-runner/SKILL.md": "f0f214c041161da2072726883ba1dfa537388867ce71ecf548aa43d5cac4cdc2",
+    "skills/meeting-runner/agents/openai.yaml": "4e14d9a079265cf3f662adbef9d244bb2c005648f5fa8e0e1eef837ab431f800",
+    "skills/meeting-runner/assets/pre-call-brief-template.md": "aa772fd598dad07855a4169edd0c3875402e07ad426a1866363a38702d2e97a2",
+    "skills/meeting-runner/references/canonical-meeting-notes.md": "15fce31e94295380b15da6efd77c6bf97d4adab1bac73d2cadaf059254f06381",
+    "skills/meeting-runner/references/preparation-workflow.md": "3ec379bc645674f6c798525a24e7cbd299ba1765bc2b71a25ad0cf79e0a3ebb1",
+    "skills/meeting-runner/references/synthesis-workflow.md": "a7eb789fa889cb73638159f1c2f2946dfea53000d829d27f6d7ed31baeb0fe8b",
+    "skills/meeting-runner/references/transcript-ingestion.md": "352a1d727ffdbd4aa1675f0d50d6f88aa1b554d0d179e203caebc0c4e9a56b60"
+  },
+  "zipSha256": "0e3882f891174b28cc5175e25c7873f559e5b621e3aaeb338776eac1c6597ea8",
+  "stableBranch": "plugin-release",
+  "tag": "organization-os-plugin-v1.0.0",
+  "channels": {
+    "openaiDirectory": {
+      "status": "pending",
+      "installUrl": null
+    },
+    "claudeDirectory": {
+      "status": "pending",
+      "installUrl": null
+    }
+  },
+  "status": "local-release-candidate"
+}
